@@ -15,12 +15,11 @@ public class Gerente extends Funcionario {
         this.departamento = departamento;
     }
 
-    @Override
     public double calcularBonus() {
         return salario * 0.1;
     }
 
-    @Override
+    
     public String toString() {
         return "Gerente{" +
                 "departamento='" + departamento + '\'' +
