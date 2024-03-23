@@ -15,7 +15,7 @@ public class Main {
         System.out.println("Digite o departamento do gerente:");
         String departamentoGerente = scanner.nextLine();
 
-        Gerente gerente = new Gerente(nomeGerente, salarioGerente, departamentoGerente);
+        Gerente g = new Gerente(nomeGerente, salarioGerente, departamentoGerente);
 
         System.out.println("Digite o nome do diretor:");
         String nomeDiretor = scanner.nextLine();
@@ -29,8 +29,8 @@ public class Main {
         Diretor diretor = new Diretor(nomeDiretor, salarioDiretor, acoesDiretor);
 
         System.out.println("Dados do Gerente:");
-        System.out.println(gerente);
-        System.out.println("Bônus do gerente: R$" + gerente.calcularBonus());
+        System.out.println(g);
+        System.out.println("Bônus do gerente: R$" + g.calcularBonus());
 
         System.out.println("\nDados do Diretor:");
         System.out.println(diretor);
