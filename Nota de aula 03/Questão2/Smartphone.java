@@ -1,28 +1,19 @@
 public class Smartphone extends Produto {
-
-    private boolean fazLigacao;
-
-    public Smartphone(String nome, int estoque, double preco, boolean fazLigacao) {
+    public Smartphone(String nome, int estoque, double preco) {
         super(nome, estoque, preco);
-        this.fazLigacao = fazLigacao;
     }
 
-    public boolean isFazLigacao() {
-        return fazLigacao;
-    }
-
-    public void setFazLigacao(boolean fazLigacao) {
-        this.fazLigacao = fazLigacao;
+    public void ligacao() {
+        System.out.println("Realizando ligação...");
     }
 
     @Override
-    public String toString() {
-        return super.toString() + "\n" +
-                "Faz ligação: " + (fazLigacao ? "Sim" : "Não");
-    }
-
-    @Override
-    public String getTipo() {
-        return "Smartphone";
+    public void vender() {
+        if (estoque > 0) {
+            estoque--;
+            System.out.println("Smartphone vendido!");
+        } else {
+            System.out.println("Estoque esgotado!");
+        }
     }
 }

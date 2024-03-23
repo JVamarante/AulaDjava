@@ -1,26 +1,19 @@
 public class Televisao extends Produto {
-
-    private boolean acessaCanais;
-
-    public Televisao(String nome, int estoque, double preco, boolean acessaCanais) {
+    public Televisao(String nome, int estoque, double preco) {
         super(nome, estoque, preco);
-        this.acessaCanais = acessaCanais;
     }
 
-    public boolean isAcessaCanais() {
-        return acessaCanais;
+    public void acessaCanais() {
+        System.out.println("Acessando canais...");
     }
 
-    public void setAcessaCanais(boolean acessaCanais) {
-        this.acessaCanais = acessaCanais;
-    }
-
-    public String toString() {
-        return super.toString() + "\n" +
-                "Acessa canais: " + (acessaCanais ? "Sim" : "Não");
-    }
-
-    public String getTipo() {
-        return "Televisao";
+    @Override
+    public void vender() {
+        if (estoque > 0) {
+            estoque--;
+            System.out.println("Televisão vendida!");
+        } else {
+            System.out.println("Estoque esgotado!");
+        }
     }
 }
