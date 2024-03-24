@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -11,7 +13,7 @@ public class Main {
         if (tipoConta == 1) {
             conta = new ContaCorrente(titular);
         } else {
-            conta = new ContaPoupanca(titular);
+            conta = new ContaPouponca(titular);
         }
 
         System.out.println("Menu de opções:");

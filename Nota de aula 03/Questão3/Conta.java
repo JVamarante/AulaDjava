@@ -1,5 +1,3 @@
-import java.util.Scanner;
-
 public abstract class Conta {
     protected String titular;
     protected double saldo;
